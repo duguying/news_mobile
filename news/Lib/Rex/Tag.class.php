@@ -13,7 +13,8 @@ class Tag{
 		function add_request($matches){
 	        return '<img src="'.U("Scale/thumb").'?img='.urlencode($matches[1]).'" />';
 		}
-		$content = preg_replace_callback('/<img [\w\W]+ src="([\w\W]+)" [\w\W]+\/>/', 'add_request', $content);
+		$content = preg_replace_callback('/<img [\w\W][^><]+ src="([\w\W][^><]+)" [\w\W][^><]+\/>/', 'add_request', $content);
+		// var_dump($matches);
 		return $content;
 	}
 }

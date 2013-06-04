@@ -170,7 +170,7 @@ class Image {
             $type = strtolower($type);
             $interlace = $interlace ? 1 : 0;
             unset($info);
-            $scale = min($maxWidth / $srcWidth, $maxHeight / $srcHeight); // 计算缩放比例
+            $scale = $maxWidth / $srcWidth; // 计算缩放比例
             if ($scale >= 1) {
                 // 超过原图大小不再缩略
                 $width = $srcWidth;
