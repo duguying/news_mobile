@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<link rel="stylesheet" href="{$public}jquery_mobile/jquery.mobile.custom/jquery.mobile.custom.structure.css">
+	<link rel="stylesheet" href="{$public}jquery_mobile/jquery.mobile.custom/jquery.mobile.custom.theme.css">
+	<link rel="stylesheet" href="{$public}jquery_mobile/mobile.css">
+	<title>院系</title>
+	<script src="{$public}jquery_mobile/jquery-2.0.0.min.js"></script>
+	<script src="{$public}jquery_mobile/jquery.mobile.custom/jquery.mobile.custom.min.js"></script>
+	
+</head>
+<body>
+	<div data-role="page">
+
+		<div data-role="header" data-position="inline">
+			<a href="{$www}" data-role="button" data-icon="back" data-theme="a">返回</a>
+			<h1>&nbsp;长大新闻网</h1>
+		</div>
+
+    <ul data-role="listview">
+        <foreach name="type" item="vo">
+    	<li>
+			<a class="ui-link-inherit" href="{:U('Part/index')}?part={$vo.id}">                    
+    	        <h3 class="ui-li-heading">{$vo.typename}</h3>
+    	    </a>
+    	</li>
+		</foreach>
+    </ul>
+	<include file="./news/Tpl/footer.html" />
+	</div>
+</body>
+</html>

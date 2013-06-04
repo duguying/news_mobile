@@ -1,8 +1,8 @@
 <!doctype html>
 <html lang="en">
 <head>
-    <include file="./news/Tpl/header.html" />
-    <title>院系-长大新闻网</title>
+	<include file="./news/Tpl/header.html" />
+    <title>综合-长大新闻网</title>
 </head>
 <body>
 	<div data-role="page">
@@ -12,8 +12,8 @@
 			<div data-role="navbar">
 				<ul>
 					<li><a href="{:U('Index/index')}">要闻</a></li>
-					<li><a href="{:U('Index/yuanxi')}" class="ui-btn-active">院系</a></li>
-					<li><a href="{:U('Index/zonghe')}">综合</a></li>
+					<li><a href="{:U('Index/yuanxi')}">院系</a></li>
+					<li><a href="{:U('Index/zonghe')}" class="ui-btn-active">综合</a></li>
 					<li><a href="{:U('Index/redian')}">热点</a></li>
 					<li><a href="{:U('Index/more')}">更多</a></li>
 				</ul>
@@ -23,7 +23,7 @@
     <ul data-role="listview">
     	<foreach name="list" item="arti">
         <li>
-            <a class="ui-link-inherit" href="{:U('Article/index')}?aid={$arti.id}">                    
+            <a class="ui-link-inherit" href="{:U('Article/index')}?aid={$arti.id}">
                 <h3 class="ui-li-heading">{$arti.title}</h3>
             </a>
         </li>

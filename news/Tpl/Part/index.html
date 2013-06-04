@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<include file="./news/Tpl/header.html" />
+    <title>{$title}-长大新闻网</title>
+</head>
+<body>
+	<div data-role="page">
+		<div data-role="header">
+			<a href="{$www}" data-role="button" data-icon="back" data-theme="a">首页</a>
+			<h1>&nbsp;{$title}</h1>
+		</div>
+		<ul data-role="listview">
+		<foreach name="list" item="arti">
+    	<li>
+			<a class="ui-link-inherit" href="{:U('Article/index')}?aid={$arti.id}">                    
+    	        <h3 class="ui-li-heading">{$arti.title}</h3>
+    	    </a>
+    	</li>
+		</foreach>
+		</ul>
+		<include file="./news/Tpl/footer.html" />
+	</div>
+</body>
+</html>

@@ -1,15 +1,8 @@
 <!doctype html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1" />
-	<link rel="stylesheet" href="{$public}jquery_mobile/jquery.mobile.custom/jquery.mobile.custom.structure.css">
-	<link rel="stylesheet" href="{$public}jquery_mobile/jquery.mobile.custom/jquery.mobile.custom.theme.css">
-	<link rel="stylesheet" href="{$public}jquery_mobile/mobile.css">
+	<include file="./news/Tpl/header.html" />
 	<title>长大新闻网</title>
-	<script src="{$public}jquery_mobile/jquery-2.0.0.min.js"></script>
-	<script src="{$public}jquery_mobile/jquery.mobile.custom/jquery.mobile.custom.min.js"></script>
-	
 </head>
 <body>
 	<div data-role="page">
@@ -17,15 +10,24 @@
 			<h1>&nbsp;长大新闻网</h1>
 			<div data-role="navbar">
 				<ul>
-					<li><a href="{:U('Index/index')}" class="ui-btn-active">要闻</a></li>
+					<li><a href="{:U('Part/index')}" class="ui-btn-active">要闻</a></li>
 					<li><a href="{:U('Index/yuanxi')}" data-direction="reverse">院系</a></li>
-					<li><a href="">综合</a></li>
-					<li><a href="">热点</a></li>
-					<li><a href="">通告</a></li>
+					<li><a href="{:U('Index/zonghe')}?part=3">综合</a></li>
+					<li><a href="{:U('Index/redian')}?part=32">热点</a></li>
+					<li><a href="{:U('Index/more')}">更多</a></li>
 				</ul>
 			</div>
 		</div>
-
+		<ul data-role="listview">
+		<foreach name="list" item="arti">
+    	<li>
+			<a class="ui-link-inherit" href="{:U('Article/index')}?aid={$arti.id}">                    
+    	        <h3 class="ui-li-heading">{$arti.title}</h3>
+    	    </a>
+    	</li>
+		</foreach>
+		</ul>
+		<include file="./news/Tpl/footer.html" />
 	</div>
 </body>
 </html>
