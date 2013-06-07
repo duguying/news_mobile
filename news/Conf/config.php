@@ -10,4 +10,5 @@ return array(
 	'DB_PORT'   => 3306, // 端口
 	'DB_PREFIX' => 'dede_', // 数据库表前缀，请勿改动
 	'IMG_BASE'	=> 'http://news.yangtzeu.edu.cn',//图片基路径，可以为磁盘路径或网络路径，使用磁盘路径最好
+	'IMG_SCALE'	=>'true',//图片缩略开关
 );

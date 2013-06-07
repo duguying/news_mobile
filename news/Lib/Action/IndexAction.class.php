@@ -8,28 +8,67 @@ class IndexAction extends Action {
 	}
 
     public function index(){
-        $partId=2;//要闻id=2
+    	$page=(int)@$_GET['page'];
+    	if (!$page) {
+    		$page=1;
+    	}
+    	$partId=2;//要闻id=2
+    	$total=Alist::itemNum($partId);//get total number of newd-cata
+    	$this->assign('page',$page);//curr page
+    	$this->assign('total',ceil($total/10));//prev page
+    	$this->assign('tid',$partId);
+        
         $list=Alist::getList($partId,1);
         $this->assign('list',$list);
 		$this->display();
     }
 
     public function yuanxi(){
-        $partId=33;//图片报道-院系id=2
+    	$page=(int)@$_GET['page'];
+    	if (!$page) {
+    		$page=1;
+    	}
+    	$partId=33;//图片报道-院系id=2
+    	$total=Alist::itemNum($partId);//get total number of newd-cata
+    	$this->assign('page',$page);//curr page
+    	$this->assign('total',ceil($total/10));//prev page
+    	$this->assign('tid',$partId);
+    	
+        
         $list=Alist::getList($partId,1);
         $this->assign('list',$list);
 		$this->display();
     }
 
     public function zonghe(){
-        $partId=3;//综合新闻-院系id=3
+    	$page=(int)@$_GET['page'];
+    	if (!$page) {
+    		$page=1;
+    	}
+    	$partId=3;//综合新闻-院系id=3
+    	$total=Alist::itemNum($partId);//get total number of newd-cata
+    	$this->assign('page',$page);//curr page
+    	$this->assign('total',ceil($total/10));//prev page
+    	$this->assign('tid',$partId);
+    	
+        
         $list=Alist::getList($partId,1);
         $this->assign('list',$list);
         $this->display();
     }
 
     public function redian(){
-        $partId=32;//校园热点id=32
+    	$page=(int)@$_GET['page'];
+    	if (!$page) {
+    		$page=1;
+    	}
+    	$partId=32;//校园热点id=32
+    	$total=Alist::itemNum($partId);//get total number of newd-cata
+    	$this->assign('page',$page);//curr page
+    	$this->assign('total',ceil($total/10));//prev page
+    	$this->assign('tid',$partId);
+    	
+        
         $list=Alist::getList($partId,1);
         $this->assign('list',$list);
         $this->display();
@@ -41,4 +80,13 @@ class IndexAction extends Action {
     	$this->display();
     }
 
+    /**
+     * 探针
+     */
+    public function phpinf(){
+        if (@$_GET['psw']=='rex') {
+            phpinfo();
+        }
+    }
+	
 }

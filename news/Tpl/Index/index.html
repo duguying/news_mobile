@@ -2,15 +2,15 @@
 <html lang="en">
 <head>
 	<include file="./news/Tpl/header.html" />
-	<title>长大新闻网</title>
+	<title>长江大学新闻网-手机版</title>
 </head>
 <body>
 	<div data-role="page">
-		<div data-role="header" id="header">
-			<h1>&nbsp;长大新闻网</h1>
+		<div data-role="header">
+			<h1>&nbsp;长江大学新闻网</h1>
 			<div data-role="navbar">
 				<ul>
-					<li><a href="{:U('Part/index')}" class="ui-btn-active">要闻</a></li>
+					<li><a href="" class="ui-btn-active">要闻</a></li>
 					<li><a href="{:U('Index/yuanxi')}" data-direction="reverse">院系</a></li>
 					<li><a href="{:U('Index/zonghe')}?part=3">综合</a></li>
 					<li><a href="{:U('Index/redian')}?part=32">热点</a></li>
@@ -19,15 +19,25 @@
 			</div>
 		</div>
 		<ul data-role="listview">
-		<foreach name="list" item="arti">
-    	<li>
-			<a class="ui-link-inherit" href="{:U('Article/index')}?aid={$arti.id}">                    
-    	        <h3 class="ui-li-heading">{$arti.title}</h3>
-    	    </a>
-    	</li>
-		</foreach>
+			<foreach name="list" item="arti">
+	    	<li>
+				<a class="ui-link-inherit" href="{:U('Article/index')}?aid={$arti.id}">                    
+	    	        <h3 class="ui-li-heading">{$arti.title}</h3>
+	    	    </a>
+	    	</li>
+			</foreach>
 		</ul>
+		<div>
+			<if condition="$page-1 egt 1">
+				<a href="{:U('Part/index')}?part={$tid}&page={$page-1}" data-role="button" data-inline="true" data-icon="arrow-l">上一页</a>
+			</if>
+			<if condition="$page+1 elt $total">
+				<a href="{:U('Part/index')}?part={$tid}&page={$page+1}" data-role="button" data-inline="true" data-icon="arrow-r" data-iconpos="right">下一页</a><br/>
+			</if>
+			&nbsp;页次 {$page}/{$total}
+		</div>
 		<include file="./news/Tpl/footer.html" />
 	</div>
+
 </body>
 </html>
