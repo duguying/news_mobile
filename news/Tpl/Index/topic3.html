@@ -2,19 +2,19 @@
 <html lang="en">
 <head>
 	<include file="./news/Tpl/header.html" />
-    <title>综合-长江大学新闻网</title>
+    <title>综合-{:C("SITE_NAME")}</title>
 </head>
 <body>
 	<div data-role="page">
 		<div data-role="header" id="header">
 			
-			<h1>&nbsp;长江大学新闻网</h1>
+			<h1>&nbsp;{:C("SITE_NAME")}</h1>
 			<div data-role="navbar">
 				<ul>
 					<li><a href="{:U('Index/index')}">要闻</a></li>
-					<li><a href="{:U('Index/yuanxi')}">院系</a></li>
-					<li><a href="{:U('Index/zonghe')}" class="ui-btn-active">综合</a></li>
-					<li><a href="{:U('Index/redian')}">热点</a></li>
+					<li><a href="{:U('Index/topic2')}">院系</a></li>
+					<li><a href="{:U('Index/topic3')}" class="ui-btn-active">综合</a></li>
+					<li><a href="{:U('Index/topic4')}">热点</a></li>
 					<li><a href="{:U('Index/more')}">更多</a></li>
 				</ul>
 			</div>

@@ -3,7 +3,7 @@ class ArticleAction extends Action {
 	function __construct() {
 		import("@.Rex.Arti");
 		import("@.Rex.Alist");
-        $this->assign('www',C('WWW_PATH'));
+		$this->assign('www',C('WWW_PATH'));
 		$this->assign('public',C('WWW_PATH').'Public/');
 	}
 	function index() {
