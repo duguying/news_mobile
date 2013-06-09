@@ -85,14 +85,5 @@ class IndexAction extends Action {
     	$this->assign('type',$r);
     	$this->display();
     }
-
-    /**
-     * 探针
-     */
-    public function phpinf(){
-        if (@$_GET['psw']=='rex') {
-            phpinfo();
-        }
-    }
 	
 }
