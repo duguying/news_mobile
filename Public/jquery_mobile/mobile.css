@@ -1,0 +1,80 @@
+.error {border:1px solid #C00;padding:5px;color:#C00;margin:0 0 10px 0;}
+.NoData {padding:20px 0;text-align:center;color:#666;}
+.clear {clear:both;}
+
+.SmallPortrait {
+	filter:alpha(opacity=90); /* IE */
+	-moz-opacity:0.9; /* Moz + FF */	    
+	opacity: 0.9;
+	padding:1px;
+	background:#fff;
+	border:1px solid #666;
+}
+a:hover .SmallPortrait {
+	filter:alpha(opacity=100); /* IE */
+	-moz-opacity:1.0; /* Moz + FF */	    
+	opacity: 1.0;
+	border:1px solid #40AA53;
+}
+
+.userprofile td strong {color:#A00;}
+	
+form#form_comment {margin:10px 0 0 0;}
+
+h1.title {font-size:14pt;}
+.TextContent img {max-width:300px;}
+#header {height:75px;}
+
+#Logs {margin-top:20px;}
+#Logs .userlogs li.Tweet {margin-bottom:10px;border-bottom:1px dashed #ccc;padding:0 0 2px 0;}
+#Logs .userlogs li table {width:100%;}
+#Logs .portrait {width:36px;vertical-align:top;}
+#Logs .portrait img {
+	width:24px;
+	height:24px;
+}
+#Logs .Log {}
+#Logs .Log a {text-decoration:none;}
+#Logs .Log .caption {font-weight:bold;font-size:10pt;overflow:hidden;color:#888;padding:0;margin:0;}
+#Logs .Log .action a {font-weight:bold;}
+#Logs .Log .bottom {margin-top:10px;}
+#Logs .Log .post {font-size:10.5pt;font-weight:normal;line-height:22px;margin:5px 0 0 0;}
+#Logs .Log .post a {text-decoration:none;}
+#Logs .Log .post a:hover {text-decoration:underline;}
+#Logs .Log .post a.referer {text-decoration:none;}
+#Logs .Log .post a.referer:hover {text-decoration:underline;}
+#Logs .Log .post img {vertical-align:middle;}
+#Logs .Log .ref {
+	font-size:9pt;
+	margin:0;	
+	padding:5px 0 0 0;
+	background:url('../img/space/up_arrow.gif') no-repeat 15px 0;
+}
+#Logs .Log .ref .p {
+	font-weight:normal;
+	border:1px solid #ccc;
+	background:#fff;
+	padding:5px;
+	color:#999;	
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+}
+#Logs .Log .ref .rpost {display:block;margin:3px 0;}
+
+#Logs .Log .photo {
+	margin:10px 0;
+}
+#Logs .Log .photo img {border:1px solid #f6f6f6;padding:1px;}
+#Logs .Log .photo a:hover img {border:1px solid #40AA53;}
+
+#Logs .Log .time {float:left;font-size:x-small;margin:0;color:#888;}
+#Logs .Log .opts {float:right;font-size:9pt;margin:0 5px 0 0;}
+#Logs .Log .opts a {color:#669;}
+#Logs .Log .opts a:hover {color:#A00;}
+#Logs .Log .opts a span {font-size:7pt;}
+
+img{
+	width: 100% !important;
+	height: auto;
+}
