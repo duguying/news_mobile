@@ -1,5 +1,5 @@
 /news/Runtime/
-/Public/jquery_mobile/
+# /Public/jquery_mobile/
 /.settings/
 /.buildpath
 /.project
