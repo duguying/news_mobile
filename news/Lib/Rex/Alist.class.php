@@ -32,16 +32,17 @@ class Alist{
 	 * @return unknown
 	 */
 	static public function getList($id,$page=1){
-		$l=M('archives')->where(array('typeid'=>$id))->order('sortrank desc')->page($page,10)->select();
+		$l=M('archives')->where(array('typeid'=>$id, 'arcrank'=>0))->order('sortrank desc')->page($page,10)->select();
 		return $l;
 	}
 	
 	/**
 	 * 获取指定分类tid[typeid]的新闻条数
+	 * 'arcrank'=>0为正常的文章<0为作废文章
 	 * @param unknown $tid
 	 */
 	static public function itemNum($tid){
-		return M('archives')->where(array('typeid'=>$tid))->count();
+		return M('archives')->where(array('typeid'=>$tid, 'arcrank'=>0))->count();
 	}
 	
 	/**
