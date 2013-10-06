@@ -18,6 +18,7 @@ class Arti {
 		$title=$title['title'];
 		$body=$this->artModel->where(array('aid'=>$aid))->find();
 		$body=Tag::scaleimage($body['body'].(($body['redirecturl']=='')?'':('<br>跳转新闻 <a href='.$body['redirecturl'].'>'.$body['redirecturl'].'</a>')));
+		$body=(($body=='')?'<br>抱歉，正文为空或无法显示，请访问电脑版。':$body);
 		
 		return array(
 				'title'=>$title,
