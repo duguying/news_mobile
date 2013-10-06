@@ -17,7 +17,7 @@ class Arti {
 		$time=$title['pubdate'];//int型时间
 		$title=$title['title'];
 		$body=$this->artModel->where(array('aid'=>$aid))->find();
-		$body=Tag::scaleimage($body['body']);
+		$body=Tag::scaleimage($body['body'].(($body['redirecturl']=='')?'':('<br>跳转新闻 <a href='.$body['redirecturl'].'>'.$body['redirecturl'].'</a>')));
 		
 		return array(
 				'title'=>$title,
