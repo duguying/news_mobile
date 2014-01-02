@@ -13,3 +13,7 @@
 
 MIT License<br/>
 dev by `Rex`
+
+
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/duguying/news_mobile/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+
