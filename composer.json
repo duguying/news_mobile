@@ -17,7 +17,8 @@
         "psr-0": {"news_mobile": "news/"}
     },
     "require": {
-        "php": ">=5.3.0"
+        "php": ">=5.3.0",
+        "topthink/thinkphp": "3.1.3"
     }
 }
 
