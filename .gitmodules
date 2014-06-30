@@ -1,0 +1,4 @@
+[submodule "ThinkPHP"]
+	path = ThinkPHP
+	url = git://github.com/liu21st/thinkphp.git
+	branch = 3.1

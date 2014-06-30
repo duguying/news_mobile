@@ -12,14 +12,16 @@
 # Deps #
 
 - ThinkPHP 3.1.3
-- ~~jQuery-mobile~~
+- jQuery-mobile
 
 
 # Install #
 
-You can install it via composer as follow:
+You can install it as follow:
 
-	$ composer create-project duguying/news_mobile
+	$ git clone https://github.com/duguying/news_mobile.git
+	$ git submodule init
+	$ git submodule update
 
 # License #
 
